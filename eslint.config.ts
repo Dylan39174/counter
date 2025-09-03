@@ -10,8 +10,16 @@ import pluginVitest from '@vitest/eslint-plugin'
 
 export default defineConfigWithVueTs(
   {
+    root: true,
     name: 'app/files-to-lint',
     files: ['**/*.{ts,mts,tsx,vue}'],
+      parserOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      parser: '@typescript-eslint/parser',
+      project: './tsconfig.json',
+      tsconfigRootDir: __dirname
+  },
   },
 
   globalIgnores(['**/dist/**', '**/dist-ssr/**', '**/coverage/**']),
