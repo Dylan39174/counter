@@ -1,5 +1,5 @@
 <template>
-  <div class="baseCounter">
+  <div class="base-counter">
       <div class='counter'>
         <div class="content">
           <BaseButton
@@ -27,11 +27,8 @@
         </div>
         
         <BaseButton
-          class="resetHistory"
+          class="reset-counter is-big"
           @click="resetCount()">Reset</BaseButton>
-      </div>
-      <div class="history" v-if="showHistory">
-
       </div>
   </div>
 </template>
@@ -41,13 +38,9 @@
 import { ref } from 'vue';
 import BaseButton from './BaseButton.vue';
 import ShortText from './ShortText.vue';
-import vue from '@vitejs/plugin-vue';
-import { configDefaults } from 'vitest/config';
 import { Icon } from '@iconify/vue';
 
 const count = ref(0);
-
-const showHistory = ref(false);
 
 const increment = () => count.value++;
 
@@ -55,18 +48,17 @@ const decrement = () => count.value >= 1 ? count.value-- : count.value;
 
 const resetCount = () => count.value = 0;
 
-
 </script>
 
 <style scoped lang="sass">
   @use '../assets/styles/sass/_variables.sass' as var
 
-  .baseCounter
-    min-height: 100vh
+  .base-counter
     display: flex
     justify-content: center
     align-items: center
     background: var.$color-secondary
+    flex: 1
   
     .counter
       display: flex
@@ -77,5 +69,8 @@ const resetCount = () => count.value = 0;
       display: flex
       align-items: center
       gap: 5vw
+
+    .reset-counter
+      margin: auto
 
 </style>

@@ -1,9 +1,9 @@
 <template>
-  <BaseCounter />
+  <CounterBox />
 </template>
 
 <script setup lang="ts">
-import BaseCounter from './components/BaseCounter.vue';
+  import CounterBox from './components/CounterBox.vue';
 </script>
 
-<style scoped></style>
+<style scoped lang="sass"></style>

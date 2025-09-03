@@ -11,7 +11,6 @@ import type { ShortTextType } from '../types/ShortTextType';
 const props = withDefaults(defineProps<ShortTextType>(), {
     class: '',
     tag: 'span',
-    text: '',
 });
 </script>
 

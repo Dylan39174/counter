@@ -15,8 +15,9 @@ const props = defineProps<ButtonType>();
   @use '../assets/styles/sass/_variables' as var
 
   .button
-    padding: max(25px, 2.5vw)
     cursor: pointer
+    padding: 5px 10px
+    width: fit-content
     display: flex
     justify-content: center
     align-items: center
@@ -33,12 +34,10 @@ const props = defineProps<ButtonType>();
       box-shadow: none
 
     &.is-big
-      font-size: 4rem
+      padding: max(25px, 2.5vw)
 
     &.is-icon
       width: 100px
       height: 100px
-
-      
 
 </style>
