@@ -59,11 +59,14 @@ const resetCount = () => count.value = 0;
 </script>
 
 <style scoped lang="sass">
+  @use '../assets/styles/sass/_variables.sass' as var
+
   .baseCounter
     min-height: 100vh
     display: flex
     justify-content: center
     align-items: center
+    background: var.$color-secondary
   
     .counter
       display: flex
